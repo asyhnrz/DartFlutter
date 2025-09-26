@@ -16,9 +16,10 @@ class Quiz1 extends StatelessWidget {
               fontSize: 20, fontWeight: FontWeight.bold,
               )
               ),
-              SizedBox(height: 15),
+              Icon(Icons.more_horiz)
             ],
           ),
+          const SizedBox(height: 20),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [Text("Your Program",
@@ -35,15 +36,38 @@ class Quiz1 extends StatelessWidget {
             ),
             ],
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 15),
 
           Container(
             padding: const EdgeInsets.all(16),
+            width: double.infinity,
             height: 250,
             decoration: BoxDecoration(
               gradient: LinearGradient(
-                begin: Alignment.topLeft, end: Alignment.topRight, colors: [Colors.purple],
-                ),
+                begin: Alignment.centerLeft, end: Alignment.centerRight,
+                colors: [
+                  const Color.fromARGB(255, 140, 21, 160),
+                  const Color.fromARGB(255, 211, 159, 239),
+                  ],),
+              borderRadius: const BorderRadius.only(
+                topRight: Radius.circular(90),
+              )
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("Next Workout",
+                style: TextStyle(fontWeight: FontWeight.normal,
+                color: Colors.white),),
+                Text("Let Toning",
+                style: TextStyle(fontSize: 22 ,fontWeight:  FontWeight.bold,
+                color: Colors.white),),
+                Text("and Glutes Workout",
+                style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold,
+                color: Colors.white),),
+
+                SizedBox(height: 25,),
+              ],
             ),
           )
         ],
