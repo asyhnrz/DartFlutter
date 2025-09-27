@@ -84,8 +84,8 @@ class Quiz1 extends StatelessWidget {
                     ),
                     Container(
                     margin: EdgeInsets.only(right: 30),
-                    height: 50,
-                    width: 50,
+                    height: 45,
+                    width: 45,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(35)),
                       color: Colors.white),
@@ -96,7 +96,44 @@ class Quiz1 extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 25,)
+        SizedBox(height: 25),
+        Stack(
+          children: [
+            Container(
+              width: 500,
+              height: 120,
+              padding: EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                image: DecorationImage(image: AssetImage("Gambar/card.jpg"),
+                fit: BoxFit.cover),
+              borderRadius: BorderRadius.circular(20),
+              ),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                SizedBox(width: 200),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("You are doing great",
+                    style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue),
+                    ),
+                    Text("Keep it up",
+                    style: TextStyle(fontSize: 13, color: Colors.grey),
+                    ),
+                    Text("stick to your plan",
+                    
+                    style: TextStyle(fontSize: 13, color: Colors.grey),),
+                  ],
+                ),
+              ],
+            ),
+            ),
+            Positioned(left: 10, top: 0,
+            child: Image.asset("Gambar/figure1.png", height: 90),),
+          ],
+        )
         ],
       ),
       ),
