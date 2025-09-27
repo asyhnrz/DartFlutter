@@ -127,17 +127,41 @@ class Quiz1 extends StatelessWidget {
                     style: TextStyle(fontSize: 13, color: Colors.grey),),
                   ],
                 ),
-                SizedBox(height: 10),
-                Text("Area of Focus",
-                style: TextStyle(fontWeight: FontWeight.bold),),
-                SizedBox(height: 10),
               ],
             ),
             ),
             Positioned(left: 10, top: 0,
             child: Image.asset("Gambar/figure1.png", height: 90),),
           ],
-        )
+        ),
+        SizedBox(height: 15),
+            Text("Area of Focus",
+            style: TextStyle(fontWeight: FontWeight.bold),),
+            SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(child: Container(
+                  height: 100,
+                  padding: EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20), color: Colors.white,
+                    image: DecorationImage(image: AssetImage("Gambar/ex3.png"), fit: BoxFit.contain),
+                  ),
+                ),
+                ),
+                SizedBox(width: 20),
+                Expanded(child: Container(
+                  height: 100,
+                  padding: EdgeInsets.all(10),
+                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),
+                  color: Colors.white, image: DecorationImage(image: AssetImage("Gambar/ex4.png"),
+                  fit: BoxFit.contain),
+                  ),
+                ),
+                )
+              ],
+            )
         ],
       ),
       ),
