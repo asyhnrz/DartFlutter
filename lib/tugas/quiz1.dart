@@ -39,9 +39,6 @@ class Quiz1 extends StatelessWidget {
           const SizedBox(height: 15),
 
           Container(
-            padding: const EdgeInsets.all(16),
-            width: double.infinity,
-            height: 240,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.centerLeft, end: Alignment.centerRight,
@@ -56,6 +53,7 @@ class Quiz1 extends StatelessWidget {
                 bottomRight: Radius.circular(20)
               )
             ),
+            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -69,24 +67,36 @@ class Quiz1 extends StatelessWidget {
                 style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold,
                 color: Colors.white),),
 
-                SizedBox(height: 100),
+                SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Row(
-                      children: [
-                        Icon(Icons.timer),
-                        Text("60 min", style: TextStyle(
+                    Container(
+                      color: Colors.transparent,
+                      child: Row(
+                        children: [
+                          Icon(Icons.timer, color: Colors.white, size: 15),
+                          Text("60 min", style: TextStyle(
                           fontWeight: FontWeight.normal,
                           color: Colors.white),),
-                      ],
-                    )
+                        ],
+                      ),
+                    ),
+                    Container(
+                    margin: EdgeInsets.only(right: 30),
+                    height: 50,
+                    width: 50,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(35)),
+                      color: Colors.white),
+                    child: Icon(Icons.play_arrow, color: Colors.purpleAccent),
+                  ),
                   ],
                 )
               ],
             ),
           ),
+          SizedBox(height: 25,)
         ],
       ),
       ),
