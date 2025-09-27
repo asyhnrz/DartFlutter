@@ -16,7 +16,7 @@ class Quiz1 extends StatelessWidget {
               fontSize: 20, fontWeight: FontWeight.bold,
               )
               ),
-              Icon(Icons.more_horiz)
+            const Icon(Icons.calendar_month)
             ],
           ),
           const SizedBox(height: 20),
@@ -41,7 +41,7 @@ class Quiz1 extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(16),
             width: double.infinity,
-            height: 250,
+            height: 240,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.centerLeft, end: Alignment.centerRight,
@@ -50,7 +50,10 @@ class Quiz1 extends StatelessWidget {
                   const Color.fromARGB(255, 211, 159, 239),
                   ],),
               borderRadius: const BorderRadius.only(
-                topRight: Radius.circular(90),
+                topRight: Radius.circular(115),
+                topLeft: Radius.circular(20),
+                bottomLeft: Radius.circular(20),
+                bottomRight: Radius.circular(20)
               )
             ),
             child: Column(
@@ -66,10 +69,24 @@ class Quiz1 extends StatelessWidget {
                 style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold,
                 color: Colors.white),),
 
-                SizedBox(height: 25,),
+                SizedBox(height: 100),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Row(
+                      children: [
+                        Icon(Icons.timer),
+                        Text("60 min", style: TextStyle(
+                          fontWeight: FontWeight.normal,
+                          color: Colors.white),),
+                      ],
+                    )
+                  ],
+                )
               ],
             ),
-          )
+          ),
         ],
       ),
       ),
